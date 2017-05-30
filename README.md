@@ -1,6 +1,6 @@
 
 
-How to Build an Electron App With a Local SQLite3 Database That's Portable.
+How to Build an Electron App with a Local SQLite3 Database That's Portable.
 ------------------------------------------------------------------------
 
 This project demonstrates how to install and use a local SQLite3 database in Electron using SQL.js. SQL.js is a port of SQLite to JavaScript, by compiling the SQLite C code with [Emscripten](https://github.com/kripken/emscripten). Using only JavaScript means there are no C bindings or node-gyp compilations to deal with.
