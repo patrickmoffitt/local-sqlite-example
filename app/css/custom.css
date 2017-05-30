@@ -1,0 +1,22 @@
+@media (min-width: 768px) {
+  label {
+    text-align: right;
+  }
+}
+
+#add-person,
+#edit-person {
+  display: none;
+}
+.icon {
+  width: 1em;
+}
+h2 {
+  padding: 0.25em 0.9em;
+}
+#people-list {
+  margin-left: 0.9em;
+}
+#people-list img {
+  margin: 0 0.5em;
+}
