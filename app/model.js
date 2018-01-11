@@ -55,7 +55,7 @@ SQL.dbOpen = function (databaseFileName) {
 SQL.dbClose = function (databaseHandle, databaseFileName) {
   try {
     let data = databaseHandle.export()
-    let buffer = new Buffer(data)
+    let buffer = Buffer.alloc(data.length, data)
     fs.writeFileSync(databaseFileName, buffer)
     databaseHandle.close()
     return true

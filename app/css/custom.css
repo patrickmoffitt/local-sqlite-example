@@ -1,18 +1,45 @@
 @media (min-width: 768px) {
-  label {
-    text-align: right;
+  label.col-form-label {
+    width: 17%;
+  }
+  input.form-control {
+    max-width: 20em;
   }
 }
-
-#add-person,
-#edit-person {
-  display: none;
+@media (max-width: 575px) {
+  main {
+    margin-top: 5.5em;
+  }
+  #people,
+  #edit-person {
+    margin: 0 1em 0 0;
+  }
+  #people img {
+    margin: 0 0.25em;
+  }
+}
+#menu {
+  height: 6em;
+}
+#nav-bar span {
+  color: white;
+}
+div.edit-icons {
+  white-space: nowrap;
 }
 .icon {
   width: 1em;
 }
 h2 {
   padding: 0.25em 0.9em;
+}
+label,
+input.form-control {
+  margin-right: 0.5em;
+}
+#add-person,
+#edit-person {
+  display: none;
 }
 #people-list {
   margin-left: 0.9em;

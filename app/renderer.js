@@ -39,13 +39,14 @@ $('document').ready(function () {
     let ok = true
     $('#first_name, #last_name').each(function (idx, obj) {
       if ($(obj).val() === '') {
-        $(obj).parent().removeClass('has-success').addClass('has-error')
+        $(obj).removeClass('is-valid').addClass('is-invalid')
         ok = false
       } else {
-        $(obj).parent().addClass('has-success').removeClass('has-error')
+        $(obj).addClass('is-valid').removeClass('is-invalid')
       }
     })
     if (ok) {
+      $('#edit-person-form').addClass('was-validated')
       let formId = $(e.target).parents('form').attr('id')
       let keyValue = window.view.getFormFieldValues(formId)
       window.model.saveFormData('people', keyValue, function () {

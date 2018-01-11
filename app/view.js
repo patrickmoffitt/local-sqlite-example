@@ -7,12 +7,14 @@ module.exports.showPeople = function (rowsObject) {
   for (let rowId in rowsObject) {
     let row = rowsObject[rowId]
     markup += '<div class="row justify-content-start">' +
-    '<div class="col-sm-3"><img id="edit-pid_' + row.person_id + '" class="icon edit" src="' +
-    path.join(__dirname, 'img', 'edit-icon.png') + '">' +
-    '<img id="del-pid_' + row.person_id + '" class="icon delete" src="' +
-    path.join(__dirname, 'img', 'x-icon.png') + '"></div>' +
-    '<div class="col-sm-3 lastname">' + row.last_name + ',</div>' +
-    '<div class="col-sm-3 firstname">' + row.first_name + '</div>' +
+    '<div class="col-xs-2 edit-icons"><a href="#"><img id="edit-pid_' +
+    row.person_id + '" class="icon edit" src="' +
+    path.join(__dirname, 'img', 'edit-icon.png') + '"></a>' +
+    '<a href="#"><img id="del-pid_' + row.person_id +
+    '" class="icon delete" src="' + path.join(__dirname, 'img', 'x-icon.png') +
+    '"></a></div>' +
+    '<div class="col-xs-5 name">' + row.last_name + ',&nbsp;</div>' +
+    '<div class="col-xs-5 name">' + row.first_name + '</div>' +
     '</div>'
   }
   $('#add-person, #edit-person').hide()
@@ -47,9 +49,9 @@ module.exports.addPerson = function (e) {
   $('#edit-person h2').html('Add Person')
   $('#edit-person-submit').html('Save')
   $('#edit-person-form input').val('')
-  $('#first_name, #last_name').parent()
-    .removeClass('has-success')
-    .addClass('has-error')
+  $('#edit-person-form').removeClass('was-validated')
+  $('#first_name, #last_name')
+    .removeClass('is-valid is-invalid')
   $('#person_id').parent().hide()
   $('#edit-person').show()
 }
@@ -57,9 +59,9 @@ module.exports.addPerson = function (e) {
 module.exports.editPerson = function (pid) {
   $('#edit-person h2').html('Edit Person')
   $('#edit-person-submit').html('Update')
-  $('#first_name, #last_name').parent()
-    .removeClass('has-success')
-    .addClass('has-error')
+  $('#edit-person-form').removeClass('was-validated')
+  $('#first_name, #last_name')
+    .removeClass('is-valid is-invalid')
   $('#person_id').parent().show()
   pid = pid.split('_')[1]
   let row = model.getPerson(pid)[0]

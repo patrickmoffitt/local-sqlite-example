@@ -17,7 +17,8 @@ app.on('ready', function () {
     title: config.productName,
     show: false,
     webPreferences: {
-      nodeIntegration: true
+      nodeIntegration: true,
+      defaultEncoding: 'UTF-8'
     }
   })
 
