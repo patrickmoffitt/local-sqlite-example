@@ -1,5 +1,7 @@
 
 
+![Logo](screenshots/ElectronSQLite.png)
+
 How to Build an Electron App with a Local SQLite3 Database That's Portable.
 ------------------------------------------------------------------------
 
