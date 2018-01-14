@@ -20,6 +20,8 @@
 }
 #menu {
   height: 6em;
+  overflow-y: hidden;
+  border-right: none;
 }
 #nav-bar span {
   color: white;
