@@ -9,6 +9,12 @@ This project demonstrates how to install and use a local SQLite3 database in Ele
 
 Updates
 -------
+__September 2020__
+- Added ```enableRemoteModule: true``` to ```webPreferences``` in **main.js** to
+address a [breaking change in Electron 10](https://www.electronjs.org/docs/breaking-changes)
+wherein the remote module is now disabled by default. Thank you to [Barbarosse](https://github.com/Barbarosse)  
+for reporting [the issue](https://github.com/patrickmoffitt/local-sqlite-example/issues/4).
+
 __January 2018__
 - Updated SQL.js to 0.4.0
 - Updated Bootstrap to 4.0.0-beta.3. Form validation was revised to agree with [current documentation](http://getbootstrap.com/docs/4.0/components/forms/). Improved responsive layout and UTF-8 support.
