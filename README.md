@@ -44,3 +44,7 @@ Uninstalling
 -------------
 
  Please note that running this application will install a tiny SQLite database in the folder returned by electron.app.getPath('userData'). To uninstall simply delete this folder.
+
+Project Status
+--------------
+This project has been archived and is no longer being maintained by the author.
